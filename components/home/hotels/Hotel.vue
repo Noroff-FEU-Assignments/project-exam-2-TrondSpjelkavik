@@ -6,6 +6,7 @@
         <div></div>
         <nuxt-img :src="hotel.img_url" class="img-hotel" />
         <h2 class="hotel-headline">{{ hotel.name }}</h2>
+
         <div class="hotel-features">
           <Stars :hotel="hotel" />
           <div class="hotel-price">$ {{ hotel.price }}</div>
@@ -30,19 +31,24 @@ export default {
   },
   async fetch() {
     // Fetching hotel data from API
-    const url = process.env.STRAPI_URL + "hotels";
-    const res = await fetch(url);
+    try {
+      const url = process.env.STRAPI_URL + "hotels";
+      const res = await fetch(url);
+      const data = await res.json();
 
-    const data = await res.json();
-    // filling hotels from fetch
-    this.hotels = data;
+      // filling hotels from fetch
+      this.hotels = data;
+    } catch (error) {
+      console.log(error);
+    }
   }
 };
 </script>
 <style lang="scss">
 .feature-box {
+  overflow: hidden;
   display: flex;
-  max-width: 1600px;
+  max-width: 1350px;
   justify-content: center;
   margin: 0 auto;
   @media (max-width: 1000px) {

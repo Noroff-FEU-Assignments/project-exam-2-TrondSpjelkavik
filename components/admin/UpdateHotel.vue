@@ -126,6 +126,7 @@
                     class="feature-check"
                     v-model="featured"
                     label="Featured"
+                    @click="testClick"
                   ></v-checkbox>
                 </div>
               </v-card-actions>
@@ -164,10 +165,6 @@ export default {
     stars: { required, integer, between: between(1, 5) },
     pitch: { required, minLength: minLength(6) },
     img_url: { required, url }
-  },
-
-  created() {
-    console.log(this.hotels);
   },
 
   data() {
@@ -270,6 +267,7 @@ export default {
         const update = await this.$strapi.$hotels.update(id, {
           address: this.address,
           name: this.name,
+          isFeatured: this.featured,
           pitch: this.pitch,
           description: this.description,
           img_url: this.img_url,

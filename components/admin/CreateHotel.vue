@@ -110,7 +110,7 @@
                 </v-btn>
                 <v-checkbox
                   class="feature-check"
-                  v-model="form.featured"
+                  v-model="form.isFeatured"
                   label="Featured"
                 ></v-checkbox>
               </div>
@@ -165,7 +165,7 @@ export default {
         img_url: "",
         stars: 0,
         price: "",
-        featured: false,
+        isFeatured: false,
         wifi: false,
         parking: false,
         gym: false,
@@ -269,7 +269,8 @@ export default {
           this.form.img_url = "";
           this.form.stars = 0;
           this.form.price = "";
-          (this.form.featured = false), (this.form.wifi = false);
+          this.form.featured = false;
+          this.form.wifi = false;
           this.form.parking = false;
           this.form.gym = false;
           this.form.smoking = false;
