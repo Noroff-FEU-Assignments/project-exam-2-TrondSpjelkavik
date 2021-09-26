@@ -96,7 +96,6 @@
           </div>
 
           <v-textarea
-            class="test"
             prepend-icon="mdi-message-text"
             label="Message"
             v-model="form.enquirie"
@@ -222,8 +221,7 @@ export default {
         }
       }
     }
-  },
-  middleware: "authenticated"
+  }
 };
 </script>
 

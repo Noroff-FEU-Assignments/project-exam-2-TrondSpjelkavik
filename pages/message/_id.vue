@@ -23,7 +23,8 @@ export default {
     return {
       message
     };
-  }
+  },
+  middleware: "authenticated"
 };
 </script>
 <style scoped>

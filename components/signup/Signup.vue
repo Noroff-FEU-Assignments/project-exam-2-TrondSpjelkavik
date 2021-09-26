@@ -130,9 +130,7 @@ export default {
         }
       }
     }
-  },
-  // Checking if user is authenticated on Strapi
-  middleware: "authenticated"
+  }
 };
 </script>
 

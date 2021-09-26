@@ -95,7 +95,6 @@
             </div>
 
             <v-textarea
-              class="test"
               prepend-icon="mdi-message-text"
               label="Description"
               :error-messages="descriptionErrors"

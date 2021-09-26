@@ -108,7 +108,6 @@
             </div>
 
             <v-textarea
-              class="test"
               prepend-icon="mdi-message-text"
               label="Description"
               :error-messages="descriptionErrors"
@@ -126,7 +125,6 @@
                     class="feature-check"
                     v-model="featured"
                     label="Featured"
-                    @click="testClick"
                   ></v-checkbox>
                 </div>
               </v-card-actions>

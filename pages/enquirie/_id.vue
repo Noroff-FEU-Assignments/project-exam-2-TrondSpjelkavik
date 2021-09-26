@@ -23,7 +23,8 @@ export default {
     return {
       enquirie
     };
-  }
+  },
+  middleware: "authenticated"
 };
 </script>
 <style scoped>

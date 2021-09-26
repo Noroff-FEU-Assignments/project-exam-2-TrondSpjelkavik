@@ -29,7 +29,6 @@
             @input="$v.form.name.$touch()"
           />
           <v-textarea
-            class="test"
             prepend-icon="mdi-message-text"
             label="Message"
             :error-messages="messageErrors"

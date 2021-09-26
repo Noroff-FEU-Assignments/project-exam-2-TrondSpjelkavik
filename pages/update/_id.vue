@@ -23,7 +23,8 @@ export default {
     return {
       hotels
     };
-  }
+  },
+  middleware: "authenticated"
 };
 </script>
 <style scoped>
